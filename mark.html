@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#11152f">
+  <meta
+    name="description"
+    content="S-MART is a student marketplace for the University of Ilorin community."
+  >
+  <title>S-MART | UNILORIN Student Marketplace</title>
+
+  <link rel="stylesheet" href="mark.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="#" aria-label="S-MART home">
+        <img class="brand-logo" src="s-mart-logo.png" alt="">
+        <span class="brand-copy">
+          <span class="brand-name"><span>S</span>-MART</span>
+          <span class="brand-caption">CAMPUS MARKETPLACE</span>
+        </span>
+      </a>
+
+      <form id="search-form">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search products, services, and more"
+          aria-label="Search marketplace"
+        >
+      </form>
+
+      <a class="sell-link" href="listing.html">Sell an item</a>
+      <button type="button" id="login-button">Log in</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> MADE FOR THE UNILORIN COMMUNITY</p>
+        <h2>Good finds.<br><span>Great campus energy.</span></h2>
+        <p>Discover products and services from fellow students at the University of Ilorin.</p>
+      </div>
+      <div class="hero-sticker" aria-hidden="true">
+        <span>BUY</span>
+        <span>STUDENT</span>
+        <span>SELLER</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Categories</h2>
+
+      <div id="category-list">
+        <button type="button" data-category="All">All</button>
+        <button type="button" data-category="Food">Food</button>
+        <button type="button" data-category="Fashion">Fashion</button>
+        <button type="button" data-category="Services">Services</button>
+        <button type="button" data-category="Books">Books</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Available now</h2>
+      <p class="demo-note">Example listings for this prototype â€” product images and seller uploads will come later.</p>
+      <div id="product-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>S-MART is an independent student marketplace project and is not an official UNILORIN service.</p>
+  </footer>
+
+  <script src="mark.js"></script>
+</body>
+</html>

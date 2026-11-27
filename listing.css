@@ -1,0 +1,156 @@
+.listing-heading {
+  margin-bottom: 24px;
+  padding: 28px 32px;
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: white;
+}
+
+.listing-heading h1 {
+  margin: 8px 0;
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.listing-heading p:last-child {
+  margin-bottom: 0;
+  color: #d1d2dd;
+}
+
+.listing-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.75fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.listing-form,
+.preview-column {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 5px 18px rgb(17 21 47 / 5%);
+}
+
+.listing-form h2,
+.preview-column h2 {
+  margin-top: 0;
+}
+
+.listing-form label {
+  display: block;
+  margin: 16px 0 7px;
+  font-weight: 800;
+}
+
+.listing-form input,
+.listing-form select,
+.listing-form textarea {
+  width: 100%;
+  border: 1px solid #d5d3cb;
+  border-radius: 8px;
+  background: #fffefa;
+  padding: 12px;
+  font: inherit;
+}
+
+.listing-form textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field-help {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.publish-button {
+  width: 100%;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--color-yellow);
+  color: var(--color-navy);
+  padding: 14px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.publish-button:hover {
+  background: #ffe95a;
+}
+
+.preview-column {
+  position: sticky;
+  top: 24px;
+}
+
+.listing-preview {
+  min-height: 250px;
+}
+
+.preview-image {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ece8da, #f7f4e9);
+  color: var(--color-muted);
+  background-size: cover;
+  background-position: center;
+}
+
+.sell-link {
+  padding: 10px 14px;
+  border: 1px solid var(--color-yellow);
+  border-radius: 8px;
+  color: var(--color-yellow);
+  text-decoration: none;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.sell-link.active,
+.sell-link:hover {
+  background: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+nav #login-button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .listing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-column {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-heading {
+    padding: 24px 20px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  .sell-link {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11152f">
+  <title>Create a Listing | S-MART</title>
+  <link rel="stylesheet" href="mark.css">
+  <link rel="stylesheet" href="listing.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="mark.html" aria-label="S-MART home">
+        <img class="brand-logo" src="s-mart-logo.png" alt="">
+        <span class="brand-copy">
+          <span class="brand-name"><span>S</span>-MART</span>
+          <span class="brand-caption">CAMPUS MARKETPLACE</span>
+        </span>
+      </a>
+      <a class="sell-link active" href="listing.html">Create listing</a>
+      <button type="button" id="login-button">Log in</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="listing-heading">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> SELLER WORKSPACE</p>
+      <h1>Create a listing</h1>
+      <p>Share what you are selling with the UNILORIN student community.</p>
+    </section>
+
+    <div class="listing-layout">
+      <form id="listing-form" class="listing-form">
+        <h2>Product information</h2>
+
+        <label for="title">Listing title</label>
+        <input id="title" name="title" type="text" maxlength="60" placeholder="e.g. Calculus textbook" required>
+
+        <div class="form-row">
+          <div>
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">Choose a category</option>
+              <option value="Food">Food</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Services">Services</option>
+              <option value="Books">Books</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="price">Price (₦)</label>
+            <input id="price" name="price" type="number" min="0" step="50" placeholder="2500" required>
+          </div>
+        </div>
+
+        <label for="condition">Condition</label>
+        <select id="condition" name="condition" required>
+          <option value="">Choose a condition</option>
+          <option value="New">New</option>
+          <option value="Like new">Like new</option>
+          <option value="Used">Used</option>
+          <option value="For rent">For rent</option>
+          <option value="Not applicable">Not applicable</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="5" maxlength="500" placeholder="Describe the item, pickup location, and useful details." required></textarea>
+
+        <label for="image">Product photo</label>
+        <input id="image" name="image" type="file" accept="image/jpeg,image/png,image/webp">
+        <p class="field-help">Prototype preview only. JPG, PNG or WEBP. Maximum 5 MB.</p>
+
+        <button class="publish-button" type="submit">Add to marketplace preview</button>
+      </form>
+
+      <aside class="preview-column">
+        <h2>Listing preview</h2>
+        <article class="listing-preview">
+          <div id="preview-image" class="preview-image">
+            <span>Photo preview</span>
+          </div>
+          <p id="preview-category" class="product-category">Category</p>
+          <h3 id="preview-title">Your listing title</h3>
+          <p id="preview-condition">Condition</p>
+          <p id="preview-price" class="product-price">₦0</p>
+        </article>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>S-MART is an independent student marketplace project and is not an official UNILORIN service.</p>
+  </footer>
+
+  <script src="listing.js"></script>
+</body>
+</html>
