@@ -164,6 +164,23 @@ main {
   line-height: 1.6;
 }
 
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 12px 17px;
+  border-radius: 9px;
+  background: var(--color-navy);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.hero-cta:hover {
+  background: #292e53;
+}
+
 .eyebrow {
   display: flex;
   align-items: center;

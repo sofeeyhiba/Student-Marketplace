@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11152f">
+  <title>Join S-MART | UNILORIN</title>
+  <link rel="stylesheet" href="mark.css">
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <header>
+    <nav class="onboarding-nav">
+      <a class="brand" href="mark.html" aria-label="S-MART home">
+        <img class="brand-logo" src="s-mart-logo.png" alt="">
+        <span class="brand-copy">
+          <span class="brand-name"><span>S</span>-MART</span>
+          <span class="brand-caption">CAMPUS MARKETPLACE</span>
+        </span>
+      </a>
+      <a class="back-link" href="mark.html">Back to marketplace</a>
+    </nav>
+  </header>
+
+  <main class="onboarding-main">
+    <section class="welcome-panel">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAMPUS, YOUR MARKET</p>
+      <h1>Make campus<br><span>work for you.</span></h1>
+      <p>Find what you need, support student businesses, or start selling to your campus community.</p>
+      <div class="welcome-tags" aria-label="S-MART benefits">
+        <span>Discover</span>
+        <span>Connect</span>
+        <span>Grow</span>
+      </div>
+      <p class="pilot-note">UNILORIN pilot · More campuses coming later</p>
+    </section>
+
+    <section class="setup-card" aria-labelledby="setup-title">
+      <div class="setup-heading">
+        <div>
+          <p class="step-kicker" id="step-kicker">STEP 1 OF 4</p>
+          <h2 id="setup-title">How will you use S-MART?</h2>
+        </div>
+        <span class="step-count" id="step-count">01 / 04</span>
+      </div>
+
+      <div class="progress-track" aria-hidden="true">
+        <span id="progress-fill"></span>
+      </div>
+
+      <form id="onboarding-form" novalidate>
+        <section class="wizard-step" data-step="0">
+          <p class="step-description">Choose the option that fits you best. You can change this later.</p>
+          <div class="role-options">
+            <label class="role-option">
+              <input type="radio" name="role" value="buyer" required>
+              <span class="role-icon" aria-hidden="true">⌕</span>
+              <span class="role-title">I want to shop</span>
+              <span class="role-description">Discover useful things and services from students.</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="role" value="seller">
+              <span class="role-icon" aria-hidden="true">↗</span>
+              <span class="role-title">I want to sell</span>
+              <span class="role-description">Showcase your products or services to students.</span>
+            </label>
+            <label class="role-option role-option-wide">
+              <input type="radio" name="role" value="both">
+              <span class="role-icon" aria-hidden="true">✦</span>
+              <span class="role-title">A bit of both</span>
+              <span class="role-description">Shop and sell with one student account.</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="wizard-step" data-step="1" hidden>
+          <p class="step-description">Create your profile so your campus community knows who they are connecting with.</p>
+          <label class="field-label" for="full-name">Your name</label>
+          <input class="form-control" id="full-name" name="fullName" type="text" autocomplete="name" placeholder="e.g. Tobi Adeyemi" required>
+
+          <label class="field-label" for="email">Email address</label>
+          <input class="form-control" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+
+          <label class="field-label" for="phone">Phone number <span class="optional-label">Optional</span></label>
+          <input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+234 800 000 0000">
+          <p class="privacy-hint">We’ll connect secure sign-in with Amazon Cognito later. This prototype does not send or save your details.</p>
+        </section>
+
+        <section class="wizard-step" data-step="2" hidden>
+          <p class="step-description">We’ll use your campus and general area to make nearby listings easier to find.</p>
+          <label class="field-label" for="university">University</label>
+          <select class="form-control" id="university" name="university" required>
+            <option value="University of Ilorin">University of Ilorin (UNILORIN)</option>
+          </select>
+
+          <label class="field-label" for="campus-area">Campus area</label>
+          <select class="form-control" id="campus-area" name="campusArea" required>
+            <option value="">Choose a general area</option>
+            <option value="On-campus hostel">On-campus hostel</option>
+            <option value="Off-campus hostel">Off-campus hostel</option>
+            <option value="Academic area">Academic area</option>
+            <option value="Town or nearby area">Town or nearby area</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label class="field-label" for="location-detail">Area or hostel name <span class="optional-label">Optional</span></label>
+          <input class="form-control" id="location-detail" name="locationDetail" type="text" maxlength="60" placeholder="e.g. a hostel or campus area">
+          <p class="privacy-hint">Use a broad location only—not a room number or your exact address.</p>
+        </section>
+
+        <section class="wizard-step" data-step="3" hidden>
+          <p class="step-description" id="preferences-intro">Pick the categories you care about. This helps tailor your marketplace feed.</p>
+
+          <fieldset class="category-fieldset" id="buyer-categories">
+            <legend>What are you interested in?</legend>
+            <div class="category-options">
+              <label><input type="checkbox" name="buyerCategories" value="Food"><span>Food & drinks</span></label>
+              <label><input type="checkbox" name="buyerCategories" value="Fashion"><span>Fashion</span></label>
+              <label><input type="checkbox" name="buyerCategories" value="Books"><span>Books & study</span></label>
+              <label><input type="checkbox" name="buyerCategories" value="Electronics"><span>Electronics</span></label>
+              <label><input type="checkbox" name="buyerCategories" value="Services"><span>Services</span></label>
+              <label><input type="checkbox" name="buyerCategories" value="Home"><span>Room & home</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="category-fieldset" id="seller-categories" hidden>
+            <legend>What do you plan to sell?</legend>
+            <div class="category-options">
+              <label><input type="checkbox" name="sellerCategories" value="Food"><span>Food & drinks</span></label>
+              <label><input type="checkbox" name="sellerCategories" value="Fashion"><span>Fashion</span></label>
+              <label><input type="checkbox" name="sellerCategories" value="Books"><span>Books & study</span></label>
+              <label><input type="checkbox" name="sellerCategories" value="Electronics"><span>Electronics</span></label>
+              <label><input type="checkbox" name="sellerCategories" value="Services"><span>Services</span></label>
+              <label><input type="checkbox" name="sellerCategories" value="Home"><span>Room & home</span></label>
+            </div>
+          </fieldset>
+          <p class="privacy-hint">You can choose more than one, and update your preferences later.</p>
+        </section>
+
+        <section class="wizard-step completion-step" data-step="4" hidden aria-live="polite">
+          <span class="completion-mark" aria-hidden="true">✓</span>
+          <h3>You’re ready to explore</h3>
+          <p id="completion-summary"></p>
+          <p class="privacy-hint">This is a front-end prototype. Account creation, verification and saved preferences are not connected yet.</p>
+          <a class="primary-action" href="mark.html">Go to the marketplace</a>
+        </section>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+
+        <div class="wizard-actions" id="wizard-actions">
+          <button class="previous-button" id="previous-button" type="button" hidden>Back</button>
+          <button class="next-button" id="next-button" type="button">Continue <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+
+      <p class="independent-note">S-MART is an independent student project, not an official UNILORIN service.</p>
+    </section>
+  </main>
+  <script src="onboarding.js"></script>
+</body>
+</html>
